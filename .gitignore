@@ -41,3 +41,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+app/img/icon.png
+Properties/build/ligershark.chrome.targets
+Properties/build/lib/Ionic.Zip.DLL
+Properties/build/lib/MSBuild.ExtensionPack.dll
+screenshots/readme.txt
+screenshots/screenshot.png
+scripts/chrome-api-vsdoc.js
+scripts/_references.js
+DownloadOrganizer.csproj
+index.htm
