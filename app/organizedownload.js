@@ -10,28 +10,34 @@ function extractDomain(url) {
 
     //Find & remove port number
     domain = domain.split(':')[0];
-    
-    domain.pop;
-    domain = domain.pop;
 
     return domain;
 }
 
-chrome.downloads.onDeterminingFilename.addListener(function (item, __suggest) {
-    console.log("Download has been triggered.");
+console.log("JavaScript loaded.");
 
-    console.log(item.id);
 
-    //Generate filepath
-    var filepath = extractDomain(item.referrer) + "/" + item.filename;
 
-    //TODO: Sanitize filepath.
+chrome.downloads.onCreated.addListener(function (item) {
+    console.log("Download has been created.");
 
-    //Suggest filename for this download.
-    console.log("Suggesting filepath: " + filepath);
-    __suggest({ filename: filepath });
+    console.log("Referrer is: " + item.referrer);
 
-    
-    
+    var domain = extractDomain(item.referrer);
 
-});
+    console.log("Domain is: " + domain);
+
+    chrome.downloads.onDeterminingFilename.addListener(function (_item, __suggest) {
+        console.log("Determing filename.");
+
+        //Generate filepath
+        var filepath = domain + "/" + _item.filename;
+
+        //TODO: Sanitize filepath.
+
+        //Suggest filename for this download.
+        console.log("Suggesting filepath: " + filepath);
+        __suggest({ filename: filepath });
+
+    });
+})

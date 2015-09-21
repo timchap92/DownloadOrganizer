@@ -51,3 +51,5 @@ scripts/chrome-api-vsdoc.js
 scripts/_references.js
 DownloadOrganizer.csproj
 index.htm
+bin/DownloadOrganizer.zip
+DownloadOrganizer.csproj.user
