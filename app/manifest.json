@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+
+	"name": "Download Organizer",
+	"description": "This extension organizes downloads into subfolders within the default download directory.",
+	"version": "1.0",
+
+	"permissions": [
+		"downloads",
+		"tabs"
+	],
+
+	"background": {
+		"scripts": [ "organizedownload.js" ],
+		"persistent":  false
+	}
+
+	}
