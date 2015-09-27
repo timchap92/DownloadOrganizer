@@ -5,9 +5,15 @@
 	"description": "This extension organizes downloads into subfolders within the default download directory.",
 	"version": "1.0",
 
+	"options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+
 	"permissions": [
 		"downloads",
-		"tabs"
+		"tabs",
+		"storage"
 	],
 
 	"background": {
