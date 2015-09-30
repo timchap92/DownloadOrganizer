@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+<!--
+<!DOCTYPE html>
 <html>
 <head>
 	<title>My Test Extension Options</title>
@@ -24,5 +26,33 @@
 	<button id="save">Save Settings</button>
 
 	<script src="options.js"></script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Test Extension Options</title>
+</head>
+<body>
+
+    Domain:
+    <input type="text" name="domain" id="domain" /><br />
+    Alias:
+    <input type="text" name="alias" id="alias"/><br />
+
+    <label>
+        <input type="checkbox" id="nest">
+        Nest
+    </label>
+
+    <button id="save">Save</button>
+    <button id="clear">Clear All</button>
+    <div id="status"></div><br />
+    <div id="data"></div><br />
+
+
+    <script src="options.js"></script>
 </body>
 </html>
